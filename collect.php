@@ -163,7 +163,7 @@ $data = main();
 try{
  
     $db = new DB();
-    $conn = $db->Open();
+    $conn = $db->Connect();
     if($conn){
         $query =   "INSERT INTO 'leads'(
                         'name',
