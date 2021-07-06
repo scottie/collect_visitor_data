@@ -157,7 +157,7 @@ function main(){
     return $RefInfo;
 }
 
-$data = main();
+$row = main();
 //echo json_encode($data);
 
 try{
