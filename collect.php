@@ -161,28 +161,27 @@ $row = main();
 //echo json_encode($data);
 
 try{
- 
     $db = new DB();
     $conn = $db->Connect();
     if($conn){
-        $query =   "INSERT INTO 'sweepslinks'(
-                        'name',
-                        'browser', 
-                        'browserVer', 
-                        'opSystem',
-                        'ref', 
-                        'browserAgent', 
-                        'browserLang', 
-                        'ip', 
-                        'platform', 
-                        'javascript',  
-                        'city', 
-                        'region', 
-                        'country', 
-                        'loc', 
-                        'postal', '
-                        'timezone', 
-                        'timestamp') 
+        $query =   "INSERT INTO sweepslinks (
+                        name,
+                        browser, 
+                        browserVer, 
+                        opSystem,
+                        ref, 
+                        browserAgent, 
+                        browserLang, 
+                        ip, 
+                        platform, 
+                        javascript,  
+                        city, 
+                        region, 
+                        country, 
+                        loc, 
+                        postal,
+                        timezone, 
+                        timestamp) 
                     VALUES (
                         '".$row["Name"]."',
                         '".$row["Browser"]."',
@@ -199,8 +198,8 @@ try{
                         '".$row["Country"]."',
                         '".$row["Loc"]."',
                         '".$row["Postal"]."',
-                        '".$row["Timezone"].",
-                        '".$row["Time"]."
+                        '".$row["Timezone"]."',
+                        '".$row["Time"]."'
                     )";
         $conn->query($query);
     }
