@@ -165,7 +165,7 @@ try{
     $db = new DB();
     $conn = $db->Connect();
     if($conn){
-        $query =   "INSERT INTO 'leads'(
+        $query =   "INSERT INTO 'sweepslinks'(
                         'name',
                         'browser', 
                         'browserVer', 
